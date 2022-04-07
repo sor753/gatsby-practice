@@ -11,6 +11,9 @@ const IndexPage = () => {
       allMarkdownRemark {
         edges {
           node {
+            fields {
+          		slug
+        		}
             frontmatter {
               title
               date
@@ -39,7 +42,8 @@ const IndexPage = () => {
                 <BlogItem 
                   title={edge.node.frontmatter.title}
                   date={edge.node.frontmatter.date}
-                  src={edge.node.frontmatter.thumbnail.childImageSharp.fluid.src} />
+                  src={edge.node.frontmatter.thumbnail.childImageSharp.fluid.src}
+                  link={edge.node.fields.slug} />
               </Col>    
             ))
           }

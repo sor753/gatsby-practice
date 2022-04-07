@@ -2,7 +2,7 @@ import React from "react"
 import { Card } from 'react-bootstrap'
 import { Link } from 'gatsby'
 
-const BlogItem = ({ title, date, src }) => {
+const BlogItem = ({ title, date, src, link }) => {
   return (
     <Card className="mt-4">
       <Card.Img variant="top" src={src} />
@@ -11,7 +11,7 @@ const BlogItem = ({ title, date, src }) => {
         <Card.Text>
           {date} 
         </Card.Text>
-        <Link to=''>see more</Link>
+        <Link to={`/${link}`}>see more</Link>
       </Card.Body>
     </Card>
   )

@@ -1,3 +1,5 @@
+const path = require('path')
+
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions
   createPage({
@@ -6,4 +8,17 @@ exports.createPages = async ({ actions }) => {
     context: {},
     defer: true,
   })
+}
+
+module.exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = path.basename(node.fileAbsolutePath, '.md')
+
+    createNodeField({
+      node,
+      name: 'slug',
+      value: slug
+    })
+  }
 }
