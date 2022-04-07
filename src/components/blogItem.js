@@ -1,16 +1,15 @@
 import React from "react"
 import { Card } from 'react-bootstrap'
 import { Link } from 'gatsby'
-import sampleImage from '../images/image_002.jpg'
 
-const BlogItem = () => {
+const BlogItem = ({ title, date, src }) => {
   return (
     <Card className="mt-4">
-      <Card.Img variant="top" src={sampleImage} />
+      <Card.Img variant="top" src={src} />
       <Card.Body>
-        <Card.Title>ブログ　タイトル</Card.Title>
+        <Card.Title>{title}</Card.Title>
         <Card.Text>
-          2020/04/11
+          {date} 
         </Card.Text>
         <Link to=''>see more</Link>
       </Card.Body>
