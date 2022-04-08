@@ -48,6 +48,13 @@ module.exports = {
         ],
       }
     },
+		{
+			resolve: `gatsby-source-contentful`,
+			options: {
+				spaceId: `wsfwbht1h1zs`,
+				accessToken: `CEJForP4niwjP-K01PTOXLyxFenY00Z7A08ZdGKZhxc`,
+			},
+		},
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

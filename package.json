@@ -24,6 +24,10 @@
     "sass": "^1.50.0"
   },
   "devDependencies": {
+    "gatsby-remark-images": "^6.11.1",
+    "gatsby-remark-relative-images": "^2.0.2",
+    "gatsby-source-contentful": "^7.9.1",
+    "gatsby-transformer-remark": "^5.11.1",
     "prettier": "^2.6.2"
   },
   "keywords": [
